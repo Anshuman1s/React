@@ -17,7 +17,7 @@ function Card() {
          <div className="w-full px-3 py-3">
              <h1 className='font-semibold'>{elem.name}</h1>
              <p className='text-xs mt-5'>{elem.descriptions}</p>
-             <button className="px-2 py-2 bg-blue-600 text-xs rounded text-zinc mt-3">{elem.instock ? "In Stock" : "Out Of Stock"}</button>
+             <button className={`"px-5 py-1 ${elem.instock ? 'bg-blue-600' : 'bg-red-500'} text-xs rounded text-zinc mt-3"`}>{elem.instock ? "In Stock" : "Out Of Stock"}</button>
          </div>
          </div>
        ))}
