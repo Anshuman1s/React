@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Components/Card';
 import Cards from './Components/Cards';
 import Courses from './Components/Courses';
+import UseState from './Components/UseState';
 function App(){
     
   return (
@@ -9,6 +10,7 @@ function App(){
       {/* <Courses/> */}
        {/* <Cards/> */}
        {/* <Card/> */}
+       <UseState/>
 
     </div>
   )
