@@ -13,18 +13,23 @@
 
 //Task 1)
 import React from "react";
-function Props(image,name,profession){
+
+function Props({ image, name, profession, handleClick, friend, index }) {
     return (
-        <div className="w-52 bg-whiterounded-md overflow-hidden ">
+        <div className="w-52 bg-white rounded-md overflow-hidden">
             <div className="w-full h-32 bg-sky-200">
-                <img className = "w-full h-full object-cover object-[center]" src={image} alt="" />
+                <img className="w-full h-full object-cover object-[center]" src={image} alt={name} />
             </div>
             <div className="w-full p-3 bg-zinc-100">
                 <h1 className="text-xl font-semibold">{name}</h1>
                 <h5 className="text-xs">{profession}</h5>
-                <button className="mt-4 px-3 py-3 text-xs  bg-blue-500 font-semibold rounded-md text-black">Add Friend</button>
+                <button onClick={() => handleClick(index)} className={`mt-4 px-3 py-3 text-xs ${friend ? "bg-green-500" : "bg-blue-400"} font-semibold rounded-md text-black`}>
+                    {friend ? "Friend" : "Add Friend"}
+                </button>
             </div>
         </div>
-    )
+    );
 }
+
 export default Props;
+
