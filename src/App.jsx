@@ -157,27 +157,44 @@
 // Form 
 // import React, { useRef } from 'react'
 // import Form from './Components/Form';
-import React, { useState } from 'react';
-import FormCards from './Components/FormCards';
-import FormData from './Components/FormData';
+// import React, { useState } from 'react';
+// import FormCards from './Components/FormCards';
+// import FormData from './Components/FormData';
+
+// function App() {
+//   const [users, setUsers] = useState([]);
+
+//   const handleFormSubmitData = (data) => {
+//     setUsers([...users, data]);
+//   };
+//   const handleRemove = (id) =>{
+//     setUsers(()=>users.filter((item,index)=>index!=null))
+//   }
+
+//   return (
+//     <div className="w-full h-screen bg-zinc-200 flex items-center justify-center">
+//       <div className="container mx-auto">
+//         <FormCards users={users} handleRemove={handleRemove}/>
+//         <FormData handleFormSubmitData={handleFormSubmitData} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// Routing Code is here
+
+import React from 'react';
+import Routing from './Utils/Routing'
+import NavBar from './Advance/NavBar'
 
 function App() {
-  const [users, setUsers] = useState([]);
-
-  const handleFormSubmitData = (data) => {
-    setUsers([...users, data]);
-  };
-  const handleRemove = (id) =>{
-    setUsers(()=>users.filter((item,index)=>index!=null))
-  }
-
   return (
-    <div className="w-full h-screen bg-zinc-200 flex items-center justify-center">
-      <div className="container mx-auto">
-        <FormCards users={users} handleRemove={handleRemove}/>
-        <FormData handleFormSubmitData={handleFormSubmitData} />
-      </div>
-    </div>
+    <>
+    <NavBar/>
+    <Routing/>
+    </>
   );
 }
 
