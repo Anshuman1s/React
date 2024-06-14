@@ -114,43 +114,54 @@
 
 // export default App;
 
-import React, { useState } from 'react';
-import Music from './Components/Music';
-import NavBar from './Components/NavBar';
+// import React, { useState } from 'react';
+// import Music from './Components/Music';
+// import NavBar from './Components/NavBar';
 
+// function App() {
+//   const data = [
+//     { image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Beliver", artist: "Michel", added: false },
+//     { image: "https://plus.unsplash.com/premium_photo-1683140707316-42df87760f3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Bella ciao", artist: "Root", added: false },
+//     { image: "https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Come By", artist: "Julie", added: false },
+//     { image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Hey", artist: "Pup", added: false },
+//   ];
+
+//   const [SongData, setSongData] = useState(data);
+
+//   const handleClick = (index) => {
+//     setSongData((prev) => {
+//       return prev.map((item, itemindex) => {
+//         if (itemindex === index) {
+//           return { ...item, added: !item.added };
+//         }
+//         return item;
+//       });
+//     });
+//   };
+
+//   return (
+//     <>
+//       <div className="w-full h-screen bg-zinc-400">
+//         <NavBar data={SongData} />
+//         <div className="px-20 flex gap-10 mt-10 flex-wrap">
+//           {SongData.map((elem, index) => {
+//             return <Music data={elem} handleClick={() => handleClick(index)} index={index} key={index} />;
+//           })}
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default App;
+// Form 
+import React, { useRef } from 'react'
+import Form from './Components/Form';
 function App() {
-  const data = [
-    { image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Beliver", artist: "Michel", added: false },
-    { image: "https://plus.unsplash.com/premium_photo-1683140707316-42df87760f3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Bella ciao", artist: "Root", added: false },
-    { image: "https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Come By", artist: "Julie", added: false },
-    { image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Hey", artist: "Pup", added: false },
-  ];
-
-  const [SongData, setSongData] = useState(data);
-
-  const handleClick = (index) => {
-    setSongData((prev) => {
-      return prev.map((item, itemindex) => {
-        if (itemindex === index) {
-          return { ...item, added: !item.added };
-        }
-        return item;
-      });
-    });
-  };
 
   return (
-    <>
-      <div className="w-full h-screen bg-zinc-400">
-        <NavBar data={SongData} />
-        <div className="px-20 flex gap-10 mt-10 flex-wrap">
-          {SongData.map((elem, index) => {
-            return <Music data={elem} handleClick={() => handleClick(index)} index={index} key={index} />;
-          })}
-        </div>
-      </div>
-    </>
-  );
+    <Form/>
+  )
 }
 
 export default App;
