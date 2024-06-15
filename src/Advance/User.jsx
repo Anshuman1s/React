@@ -1,11 +1,17 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 function User() {
   return (
     <div className=' w-1/2 m-auto mt-10'>
       <h1 className='text-red-200 text-5xl mb-2'>User</h1>
-      <p className='mb-2 text-zinc-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, rerum eligendi expedita voluptates, blanditiis itaque quo eos minima accusamus recusandae ea suscipit sapiente molestiae rem, reiciendis dolore quisquam obcaecati accusantium.</p>
-      <button className=' text-white p-3 bg-zinc-600 font-semibold'>Explore More</button>
+     <div className="flex w-1/2 flex-col mt-5">
+      <Link className='p-3 bg-red-200 text-2xl mb-3 hover:bg-red-600' to="/user/Anshuman">Anshuman</Link>
+      <Link className='p-3 bg-red-200 text-2xl mb-3 hover:bg-red-600' to="/user/Ankur">Ankur</Link>
+      <Link className='p-3 bg-red-200 text-2xl mb-3 hover:bg-red-600' to="/user/Anmol">Anmol</Link>
+     </div>
+     <hr />
+     <Outlet/>
     </div>
   )
 }
