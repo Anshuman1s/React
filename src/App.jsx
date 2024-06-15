@@ -185,18 +185,94 @@
 
 // Routing Code is here
 
-import React from 'react';
-import Routing from './Utils/Routing'
-import NavBar from './Advance/NavBar'
+// import React from 'react';
+// import Routing from './Utils/Routing'
+// import NavBar from './Advance/NavBar'
 
+// function App() {
+//   return (
+//     <>
+//     <NavBar/>
+//     <Routing/>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// Integrating API in ReactJs
+
+
+// import React, { useState } from 'react'
+// import axios from 'axios'
+// function App() {
+//   const [products,setProducts] = useState([])
+//   const getProducts = () =>{
+//     const api = "https://fakestoreapi.com/products";
+//     axios.get(api).then(data =>{
+//       console.log(data);
+//       setProducts(data.data);
+//     }).catch(err=>{
+//       console.log(err);
+//     })
+//   }
+//   const addProducts = () =>{
+//     const api = "https://fakestoreapi.com/products";
+//     axios.post(api,{
+      
+//       title: 'test product',
+//       price: 13.5,
+//       description: 'lorem ipsum set',
+//       image: 'https://i.pravatar.cc',
+//       category: 'electronic'
+//     }).then(res =>{
+//       console.log(res);
+//     }).catch(err=>{
+//       console.log(err);
+//     })
+//   }
+//   console.log(products);
+
+//   return (
+//     <div className='p-10 '>
+//       <button onClick={getProducts} className='px-3 py-3 bg-blue-200 rounded mr-10'>Call Api</button>
+//       <button onClick={addProducts} className='px-3 py-3 bg-blue-200 rounded'>Send</button>
+//       <hr className='my-10' />
+//       <ul>
+//         {products.length>0 ? (products.map(p=>(<li className=' p-5 bg-red-200 rounded mb-10'>{p.title}</li> ))):(<h1>Loading...</h1>) }
+        
+        
+//       </ul>
+//     </div>
+
+//   )
+// }
+
+// export default App
+
+// UseEffect
+
+import React from 'react'
+import {Link,Routes,Route} from 'react-router-dom'
+import Show from './Advance/Show'
+import Home2 from './Advance/Home2'
+import Services from './Advance/Services'
 function App() {
   return (
-    <>
-    <NavBar/>
-    <Routing/>
-    </>
-  );
+    <div className='pt-[5%] pl-[5%]'>
+      <nav className='flex justify-center gap-10'>
+        <Link to = "/">Home</Link>
+        <Link to = "/show">Show</Link>
+        <Link to = "/services">Services</Link>
+      </nav>
+      <hr />
+      <Routes>
+        <Route path = "/" element={<Home2/>}></Route>
+        <Route path = "/show" element={<Show/>}></Route>
+        <Route path = "/services" element={<Services/>}></Route>
+      </Routes>
+    </div>
+  )
 }
 
-export default App;
-
+export default App
