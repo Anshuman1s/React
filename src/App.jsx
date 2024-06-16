@@ -252,25 +252,41 @@
 
 // UseEffect
 
+// import React from 'react'
+// import {Link,Routes,Route} from 'react-router-dom'
+// import Show from './Advance/Show'
+// import Home2 from './Advance/Home2'
+// import Services from './Advance/Services'
+// function App() {
+//   return (
+//     <div className='pt-[5%] pl-[5%]'>
+//       <nav className='flex justify-center gap-10'>
+//         <Link to = "/">Home</Link>
+//         <Link to = "/show">Show</Link>
+//         <Link to = "/services">Services</Link>
+//       </nav>
+//       <hr />
+//       <Routes>
+//         <Route path = "/" element={<Home2/>}></Route>
+//         <Route path = "/show" element={<Show/>}></Route>
+//         <Route path = "/services" element={<Services/>}></Route>
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// LEPSES 
+
 import React from 'react'
-import {Link,Routes,Route} from 'react-router-dom'
-import Show from './Advance/Show'
-import Home2 from './Advance/Home2'
-import Services from './Advance/Services'
+
+import LepsesRoute from './Utils/LepsesRoute';
 function App() {
   return (
-    <div className='pt-[5%] pl-[5%]'>
-      <nav className='flex justify-center gap-10'>
-        <Link to = "/">Home</Link>
-        <Link to = "/show">Show</Link>
-        <Link to = "/services">Services</Link>
-      </nav>
-      <hr />
-      <Routes>
-        <Route path = "/" element={<Home2/>}></Route>
-        <Route path = "/show" element={<Show/>}></Route>
-        <Route path = "/services" element={<Services/>}></Route>
-      </Routes>
+    <div>
+      
+      <LepsesRoute/>
     </div>
   )
 }
