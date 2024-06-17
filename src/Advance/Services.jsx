@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import axios from '../Utils/axios';
 function Services() {
   const getUsers = () =>{
-    const api = "https://fakestoreapi.com/users";
+    const api = "/users";
     axios.get(api).then(users =>{
       console.log(users);
       
