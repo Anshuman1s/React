@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from 'react'
-
+import axios from 'axios';
 function Services() {
+  const getUsers = () =>{
+    const api = "https://fakestoreapi.com/users";
+    axios.get(api).then(users =>{
+      console.log(users);
+      
+    }).catch(err=>{
+      console.log(err);
+    })
+  }
     useEffect(()=>{
+      getUsers();
         console.log("Service Component is created");
         return () =>{
             console.log("Service component is deleted");
