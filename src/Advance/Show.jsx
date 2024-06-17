@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios'
 function Show() {
     const [products,setProducts] = useState([])
@@ -11,9 +11,12 @@ function Show() {
           console.log(err);
         })
       }
+      useEffect(()=>{
+        getProducts();
+      },[])
   return (
     <>
-    <button onClick={getProducts} className='px-3 py-3 bg-blue-200 rounded mr-10'>Call Api</button>
+    {/* <button onClick={getProducts} className='px-3 py-3 bg-blue-200 rounded mr-10'>Call Api</button> */}
     <hr />
     <ul>
       {products.length > 0 ? (
