@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 *{
-    font-family: 'Gilroy';
+    font-family: 'Poppins';
+    font-weight: 500;
 }

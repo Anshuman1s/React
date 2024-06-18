@@ -252,30 +252,30 @@
 
 // UseEffect
 
-import React from 'react'
-import {Link,Routes,Route} from 'react-router-dom'
-import Show from './Advance/Show'
-import Home2 from './Advance/Home2'
-import Services from './Advance/Services'
-function App() {
-  return (
-    <div className='pt-[5%] pl-[5%]'>
-      <nav className='flex justify-center gap-10'>
-        <Link to = "/">Home</Link>
-        <Link to = "/show">Show</Link>
-        <Link to = "/services">Services</Link>
-      </nav>
-      <hr />
-      <Routes>
-        <Route path = "/" element={<Home2/>}></Route>
-        <Route path = "/show" element={<Show/>}></Route>
-        <Route path = "/services" element={<Services/>}></Route>
-      </Routes>
-    </div>
-  )
-}
+// import React from 'react'
+// import {Link,Routes,Route} from 'react-router-dom'
+// import Show from './Advance/Show'
+// import Home2 from './Advance/Home2'
+// import Services from './Advance/Services'
+// function App() {
+//   return (
+//     <div className='pt-[5%] pl-[5%]'>
+//       <nav className='flex justify-center gap-10'>
+//         <Link to = "/">Home</Link>
+//         <Link to = "/show">Show</Link>
+//         <Link to = "/services">Services</Link>
+//       </nav>
+//       <hr />
+//       <Routes>
+//         <Route path = "/" element={<Home2/>}></Route>
+//         <Route path = "/show" element={<Show/>}></Route>
+//         <Route path = "/services" element={<Services/>}></Route>
+//       </Routes>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // LEPSES 
 
@@ -292,3 +292,32 @@ export default App
 // }
 
 // export default App
+
+
+// More Advance Code
+
+import React from 'react'
+import Home from './MoreAdvance/Home'
+import UserDetail from './MoreAdvance/UserDetail'
+import User from './MoreAdvance/User'
+import {Link,Route,Routes} from 'react-router-dom'
+function App() {
+  return (
+    <div className='p-[5%] container  m-auto'>
+      <nav className='mt-10 flex justify-center gap-10'>
+        <Link to="/">Home</Link>
+        <Link to="/user">About</Link>
+        <Link to="/contact">Contact</Link>
+        
+      </nav>
+      <Routes>
+        <Route path = "/" element= {<Home/>}/>
+        <Route path = "/user" element= {<User/>}/>
+        <Route path = "/userDetails" element= {<UserDetail/>}/>
+      </Routes>
+      
+    </div>
+  )
+}
+
+export default App
