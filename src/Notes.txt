@@ -1,6 +1,6 @@
-For Route installation we use :-  npm i react-router-dom
-for Form :- npm install react-hook-form  
-Tailwind:- npx tailwindcss init -p
-npm install -D tailwindcss postcss autoprefixer
 vite installation -: npm create vite@latest
 after that npm install
+npm install -D tailwindcss postcss autoprefixer
+Tailwind:- npx tailwindcss init -p
+for Form :- npm install react-hook-form  
+For Route installation we use :-  npm i react-router-dom
