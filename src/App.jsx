@@ -296,26 +296,49 @@
 
 // More Advance Code
 
+// import React from 'react'
+// import Home from './MoreAdvance/Home'
+// import UserDetail from './MoreAdvance/UserDetail'
+// import User from './MoreAdvance/User'
+// import {Link,Route,Routes} from 'react-router-dom'
+// function App() {
+//   return (
+//     <div className='p-[5%] container  m-auto'>
+//       <nav className='mt-10 flex justify-center gap-10'>
+//         <Link to="/">Home</Link>
+//         <Link to="/user">About</Link>
+//         <Link to="/contact">Contact</Link>
+        
+//       </nav>
+//       <Routes>
+//         <Route path = "/" element= {<Home/>}/>
+//         <Route path = "/user" element= {<User/>}/>
+//         <Route path = "/userDetails" element= {<UserDetail/>}/>
+//       </Routes>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+// React Js warup Projects
+
 import React from 'react'
-import Home from './MoreAdvance/Home'
-import UserDetail from './MoreAdvance/UserDetail'
-import User from './MoreAdvance/User'
-import {Link,Route,Routes} from 'react-router-dom'
+import {Routes,Route} from 'react-router-dom'
+import Home from './Project_1/Home'
+import Details from './Project_1/Details'
 function App() {
   return (
-    <div className='p-[5%] container  m-auto'>
-      <nav className='mt-10 flex justify-center gap-10'>
-        <Link to="/">Home</Link>
-        <Link to="/user">About</Link>
-        <Link to="/contact">Contact</Link>
-        
-      </nav>
+    <div className='w-full h-screen  flex p-5 pt-5'>
       <Routes>
-        <Route path = "/" element= {<Home/>}/>
-        <Route path = "/user" element= {<User/>}/>
-        <Route path = "/userDetails" element= {<UserDetail/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/details" element={<Details/>}>
+        
+
+        </Route>
       </Routes>
-      
+     
     </div>
   )
 }
