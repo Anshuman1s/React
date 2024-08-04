@@ -4,3 +4,4 @@ npm install -D tailwindcss postcss autoprefixer
 Tailwind:- npx tailwindcss init -p
 for Form :- npm install react-hook-form  
 For Route installation we use :-  npm i react-router-dom
+For axios :- npm install axios;
